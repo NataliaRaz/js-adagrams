@@ -83,12 +83,9 @@ export const highestScoreFrom = (words) => {
     const score = scoreWord(word);
 
     if (score > bestScore) {
-    
       bestWord = word;
       bestScore = score;
-
     } else if (score === bestScore) {
-      
       const bestIsTen   = bestWord.length === 10;
       const thisIsTen   = word.length === 10;
       const thisIsShort = word.length < bestWord.length;
@@ -96,7 +93,6 @@ export const highestScoreFrom = (words) => {
       if (thisIsTen && !bestIsTen) {
         bestWord = word;
       }
-    
       else if (!bestIsTen && !thisIsTen && thisIsShort) {
         bestWord = word;
       }
